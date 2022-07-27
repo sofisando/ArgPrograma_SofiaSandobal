@@ -2,11 +2,11 @@
     padding: 20px;
 }
 div{
-    background-color: #a1b5cb;
+    background-color: #325174;
     text-align: center;
 }
 /*Estilo de la foto de perfil*/
-@media(min-with: 576px){
+@media (min-width: 576px){
     #fotodeperfil{
         position: absolute;
         width: 15%;
@@ -16,7 +16,7 @@ div{
         top: 600px;
     }
 }
-@media(max-with: 575px){
+@media(max-width: 575px){
     #fotodeperfil{
         position: absolute;
         width: 30%;
