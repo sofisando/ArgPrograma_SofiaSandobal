@@ -1,4 +1,13 @@
 .row{
-    background-image: url('../../../assets/afuerafacu.jpeg');
+    background-image: url('../../../assets/foto2Internet.jpeg');
     padding: 20px;
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.text-center {
+    text-align: center !important;
+    background-color: rgba(0, 0, 0, 0.53);
 }
