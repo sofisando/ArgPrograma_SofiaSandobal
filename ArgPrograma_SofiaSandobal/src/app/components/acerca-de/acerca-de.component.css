@@ -2,7 +2,7 @@
     padding: 20px;
 }
 div{
-    background-color: #325174;
+    background-color: #ffe3c1;
     text-align: center;
 }
 /*Estilo de la foto de perfil*/
@@ -23,7 +23,7 @@ div{
         border-radius:100%;
         box-shadow: 3px 3px 3px grey;
         left: 33%;
-        top: 630px;
+        top: 350px;
     }
 }    
     
