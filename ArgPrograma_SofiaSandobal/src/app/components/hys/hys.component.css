@@ -1,5 +1,6 @@
 .row{
     background-image: url('../../../assets/foto2Internet.jpeg');
+    background-size: cover;
     padding: 20px;
 }
 h1{
