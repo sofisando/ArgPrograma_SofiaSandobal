@@ -42,34 +42,31 @@ public class MainSecurity extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-       http.cors().and().csrf().disable()
-               .authorizeRequests()
-               .antMatchers("/auth/**").permitAll()
-               .anyRequest().authenticated()
-               .and()
-               .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
-               .and()
-               .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-       http.addFilterBefore(jwtTokenFilter(),UsernamePasswordAuthenticationFilter.class);
-               
+        http.cors().and().csrf().disable()
+                .authorizeHttpRequests()
+                .antMatchers("/auth/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
+                .and()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        http.addFilterBefore(jwtTokenFilter(),UsernamePasswordAuthenticationFilter.class);
+                
     }
-
+    @Bean
     @Override
     protected AuthenticationManager authenticationManager() throws Exception {
         return super.authenticationManager();
     }
 
-    @Bean
     @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+        return super.authenticationManagerBean(); 
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsServicesImpl).passwordEncoder(passwordEncoder());
     }
-    
-    
     
 }
